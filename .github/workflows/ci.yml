@@ -14,4 +14,4 @@ jobs:
           python tools/export_lcc.py demo/demo.pgn /tmp/lcc.bin
           python tools/check_lcc.py /tmp/lcc.bin demo/demo.pgn
       - name: Sync service tests
-        run: cd sync-service && python -m unittest -v test_server.py
+        run: cd sync-service && python test_server.py

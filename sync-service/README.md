@@ -5,7 +5,7 @@ One JSON record (`game`, `ply`, `flipped`, `updated_at` in ms, `device`), last w
 
 ```bash
 PORT=8120 LCC_SYNC_DATA=state.json python server.py
-python -m unittest test_server.py
+python test_server.py
 ```
 
 It has no authentication: run it on a private network (LAN or a VPN such as Tailscale), not the internet.
