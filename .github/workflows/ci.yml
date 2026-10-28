@@ -1,0 +1,17 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install python-chess pillow
+      - name: Export and independently check the demo data
+        run: |
+          python tools/export_lcc.py demo/demo.pgn /tmp/lcc.bin
+          python tools/check_lcc.py /tmp/lcc.bin demo/demo.pgn
+      - name: Sync service tests
+        run: cd sync-service && python -m unittest -v test_server.py
