@@ -1,5 +1,7 @@
 # T5 Chess Guide
 
+[![ci](https://github.com/hudsonwa/t5-chess-guide/actions/workflows/ci.yml/badge.svg)](https://github.com/hudsonwa/t5-chess-guide/actions/workflows/ci.yml)
+
 A native chess-book viewer for the **LilyGo T5 E-Paper S3 Pro** (ESP32-S3, 4.7" 960×540 e-ink, touch), tuned until the
 e-ink panel itself is the bottleneck.
 
